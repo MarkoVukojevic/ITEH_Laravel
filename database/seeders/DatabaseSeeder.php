@@ -38,6 +38,11 @@ class DatabaseSeeder extends Seeder
                 "name" => "iPhone",
                 "city" => "Miami",
                 "CEO" => "Steve Jobs"
+            ],
+            [
+                "name" => "Xiaomi",
+                "city" => "Bejing",
+                "CEO" => "Johny Sins"
             ]
         ]);
 
@@ -47,14 +52,21 @@ class DatabaseSeeder extends Seeder
                 "number_of_cores" => 6,
                 "is_overclockable" => true,
                 "architecture" => "x86 architecture with multi GPU design on 5nm node.",
-                "frequency" => 24.75
+                "frequency" => 4.2
             ],
             [
                 "name" => "AMD R5",
                 "number_of_cores" => 6,
                 "is_overclockable" => true,
                 "architecture" => "AMD LGA with low latency cache memory inside.",
-                "frequency" => 25.5
+                "frequency" => 5.5
+            ],
+            [
+                "name" => "Apple M1",
+                "number_of_cores" => 4,
+                "is_overclockable" => false,
+                "architecture" => "New Apple ARM design with multiple chiplets inside.",
+                "frequency" => 6.5
             ]
         ]);
 
