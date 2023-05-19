@@ -20,7 +20,7 @@ class ManufacturerResource extends JsonResource
             'id' => $this->resource->id,
             'name' => $this->resource->name,
             'city' => $this->resource->city,
-            'CEO' => $this->resource->CEO,
+            'CEO' => $this->resource->CEO
         ];
     }
 

@@ -33,7 +33,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/profile', function (Request $request) {
         return auth()->user();
     });
-    Route::resource('manufacturers', ManufacturerController::class)->only(['update', 'store', 'destroy']);
+    Route::resource('manufacturers', ManufacturerController::class)->only(['store', 'destroy']);
     Route::resource('processors', ProcessorController::class)->only(['store', 'destroy']);
     Route::resource('smartphones', SmartphoneController::class)->only(['destroy']);
 

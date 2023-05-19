@@ -70,40 +70,6 @@ class ManufacturerController extends Controller
     }
 
 
-    //PUT/PATCH
-    //localhost:8000/api/manufacturers/{manufacturerID}
-    //BODY = Manufacturer Model
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Manufacturer  $manufacturer
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Manufacturer $manufacturer)
-    {
-        $input = $request->all();
-        $validator = Validator::make($input, [
-            'name' => 'required|string',
-            'city' => 'required|string',
-            'CEO' => 'required|string',
-        ]);
-        if ($validator->fails()) {
-            return $this->sendError('Validation Error.', $validator->errors());
-        }
-        $manufacturer->name = $input['name'];
-        $manufacturer->city = $input['city'];
-        $manufacturer->CEO = $input['CEO'];
-        $manufacturer->save();
-        return response()->json([
-            "success" => true,
-            "message" => "Manufacturer updated successfully.",
-            "data" => $manufacturer
-        ]);
-    }
-
-
     //DELETE
     //localhost:8000/api/manufacturers/{manufacturerID}
     //NO BODY
